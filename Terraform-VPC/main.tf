@@ -22,6 +22,8 @@ module "ec2" {
   subnets = module.vpc.subnet_ids
 }
 
+# ALB module
+
 module "alb" {
   source = "./modules/alb"
   sg_id = module.sg.sg_id
